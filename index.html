@@ -36,46 +36,6 @@
             </div>
         </section>
     </main>
-    <script>
-    document.body.style.opacity = '1';
-
-    const form = document.getElementById('loginForm');
-    const tentativasMsg = document.getElementById('tentativasMsg');
-    const loginBox = document.querySelector('.formulario');
-    let tentativas = 0;
-    let bloqueado = false;
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      if (bloqueado) return;
-
-      const user = document.getElementById('ilogin').value.trim().toLowerCase();
-      const pass = document.getElementById('isenha').value.trim();
-
-      if (user === 'recepção' && pass === '04042026') {
-        localStorage.setItem("auth", "true");
-        window.location.href = 'gathering.html';
-      } else {
-        tentativas++;
-        tentativasMsg.textContent = `Tentativa ${tentativas} de 3`;
-        alert('Usuário ou senha incorreto! Tentativa: ' + tentativas + ' de 3.');
-
-        if (tentativas >= 3) {
-          bloqueado = true;
-          tentativasMsg.textContent = `Acesso bloqueado por 15 segundos...`;
-          loginBox.classList.add('bloqueado');
-            //time out não está funcionando não sei porque
-          setTimeout(() => {
-            tentativas = 0;
-            bloqueado = false;
-            loginBox.classList.remove('bloqueado');
-            tentativasMsg.textContent = '';
-            alert('Login desbloqueado. Você pode tentar novamente.');
-          }, 15000); // 15 segundos
-        }
-      }
-    });
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>

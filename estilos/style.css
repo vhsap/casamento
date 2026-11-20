@@ -36,7 +36,7 @@ section#login{
     
 
     transform: translate(-50%, -50%);
-    transition: width .3s, heigth .3s;
+    transition: width .3s, height .3s;
     transition-timing-function: ease;
 }
 section#login > div#imagem{
@@ -78,7 +78,7 @@ div.campo{
 }
 div.campo > input{
     background-color: #bacfa6;
-    font-family: 1em;
+    /*font-size: 0.4em;*/
     width: calc(100% - 33px);
     height: 100%;
     border: 0px;
@@ -122,4 +122,29 @@ form > a.botao:hover{
 }
 form > a.botao > i{
     font-size: 0.8em;
+}
+
+/* Campos e botão desabilitados */
+
+form input:disabled {
+    cursor: not-allowed;
+}
+
+#formulario.bloqueado .campo {
+    opacity: 0.55;
+}
+
+#formulario.bloqueado .campo > input {
+    cursor: not-allowed;
+}
+
+/* Mensagem de tentativas e bloqueio */
+
+.tentativas {
+    min-height: 20px;
+    margin: 5px 0;
+    color: #7B3028;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
 }
