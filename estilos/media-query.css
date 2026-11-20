@@ -25,7 +25,11 @@ Grandes telas: acima de 1200px
         float: right;
         width: 70%;
     }
-    
+    /*GATHERING.HTML*/
+    section#g-0{
+        width: 80vw;
+        height: 280px;
+    }
 }
 /*
     desktop
@@ -55,4 +59,9 @@ Grandes telas: acima de 1200px
     font-size: 1em;
     margin: 20px;
 }
+/*GATHERING.HTML*/
+section#g-0{
+        width: 98%;
+        height: 98%;
+    }
 }
