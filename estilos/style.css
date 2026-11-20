@@ -45,6 +45,7 @@ section#login > div#imagem{
     background-size: cover;
     background-position: center;
     height: 200px;
+    cursor: none;
     
 }
 section#login >div#formulario{
