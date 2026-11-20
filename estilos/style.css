@@ -180,4 +180,10 @@ section#g-0 > div#g-imagem{
     background-position: center;
     height: 200px;
 }
+section#g-l{
+    display: none;
+}
+section#g-r{
+    display: none;    
+}
  
